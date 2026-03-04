@@ -49,11 +49,8 @@ builder.Services.AddHttpClient<IAiPredictionService, AiPredictionService>();
 var app = builder.Build();
 
 // --- HTTP REQUEST PIPELINE (Ara Katmanlar) ---
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseAuthorization();

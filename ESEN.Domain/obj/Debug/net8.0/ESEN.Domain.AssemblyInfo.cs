@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ESEN.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b6b97a25426accee9624906a2b24394efeeac82")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02c7860fef956d0d9fdddea6fd52697872c5d249")]
 [assembly: System.Reflection.AssemblyProductAttribute("ESEN.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ESEN.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
