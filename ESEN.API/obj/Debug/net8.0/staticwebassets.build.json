@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "lZGTRONXfsV03sDgTjdpcJkLm2sQe6c+skCdEdA8g2c=",
+  "Source": "ESEN.API",
+  "BasePath": "_content/ESEN.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

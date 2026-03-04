@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ESEN.API.props" />
+</Project>

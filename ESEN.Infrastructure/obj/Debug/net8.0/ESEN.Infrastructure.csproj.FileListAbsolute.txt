@@ -1,0 +1,16 @@
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\bin\Debug\net8.0\ESEN.Infrastructure.deps.json
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\bin\Debug\net8.0\ESEN.Infrastructure.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\bin\Debug\net8.0\ESEN.Infrastructure.pdb
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\bin\Debug\net8.0\ESEN.Domain.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\bin\Debug\net8.0\ESEN.Domain.pdb
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\obj\Debug\net8.0\ESEN.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\obj\Debug\net8.0\ESEN.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\obj\Debug\net8.0\ESEN.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\obj\Debug\net8.0\ESEN.Infrastructure.AssemblyInfo.cs
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\obj\Debug\net8.0\ESEN.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\obj\Debug\net8.0\ESEN.Infrastructure.sourcelink.json
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\obj\Debug\net8.0\ESEN.Inf.46B63AD5.Up2Date
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\obj\Debug\net8.0\ESEN.Infrastructure.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\obj\Debug\net8.0\refint\ESEN.Infrastructure.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\obj\Debug\net8.0\ESEN.Infrastructure.pdb
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Infrastructure\obj\Debug\net8.0\ref\ESEN.Infrastructure.dll

@@ -1,0 +1,13 @@
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\bin\Debug\net8.0\ESEN.Domain.deps.json
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\bin\Debug\net8.0\ESEN.Domain.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\bin\Debug\net8.0\ESEN.Domain.pdb
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\obj\Debug\net8.0\ESEN.Domain.csproj.AssemblyReference.cache
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\obj\Debug\net8.0\ESEN.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\obj\Debug\net8.0\ESEN.Domain.AssemblyInfoInputs.cache
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\obj\Debug\net8.0\ESEN.Domain.AssemblyInfo.cs
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\obj\Debug\net8.0\ESEN.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\obj\Debug\net8.0\ESEN.Domain.sourcelink.json
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\obj\Debug\net8.0\ESEN.Domain.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\obj\Debug\net8.0\refint\ESEN.Domain.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\obj\Debug\net8.0\ESEN.Domain.pdb
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.Domain\obj\Debug\net8.0\ref\ESEN.Domain.dll
