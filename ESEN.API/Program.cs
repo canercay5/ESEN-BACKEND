@@ -4,6 +4,7 @@ using ESEN.Domain.Interfaces;
 using ESEN.Infrastructure.Data;
 using ESEN.Infrastructure.Repositories;
 using ESEN.Infrastructure.Services;
+using Microsoft.AspNetCore.HttpOverrides;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
@@ -22,6 +23,13 @@ builder.Services.AddCors(options =>
             .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod());
+});
+
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+    options.KnownNetworks.Clear();
+    options.KnownProxies.Clear();
 });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -42,8 +50,10 @@ else
 builder.Services.AddSingleton<MongoDbContext>(sp =>
 {
     var configuration = sp.GetRequiredService<IConfiguration>();
-    var connectionString = configuration["MongoDbSettings:ConnectionString"];
-    var databaseName = configuration["MongoDbSettings:DatabaseName"];
+    var connectionString = configuration["MongoDbSettings:ConnectionString"]
+        ?? throw new InvalidOperationException("Missing MongoDbSettings:ConnectionString configuration.");
+    var databaseName = configuration["MongoDbSettings:DatabaseName"]
+        ?? throw new InvalidOperationException("Missing MongoDbSettings:DatabaseName configuration.");
 
     return new MongoDbContext(connectionString, databaseName);
 });
@@ -55,10 +65,15 @@ builder.Services.AddHttpClient<IAiPredictionService, AiPredictionService>();
 
 var app = builder.Build();
 
+app.UseForwardedHeaders();
+
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+if (app.Environment.IsProduction())
+{
+    app.UseHttpsRedirection();
+}
 
 app.UseCors();
 app.UseAuthorization();
