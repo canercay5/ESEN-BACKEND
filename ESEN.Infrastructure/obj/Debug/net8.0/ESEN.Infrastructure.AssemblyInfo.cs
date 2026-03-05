@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ESEN.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6753381e05c33d70c19541ab7254a4065a8034fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5abb08eb9e8ecb5a53a374ff9de0950018543f74")]
 [assembly: System.Reflection.AssemblyProductAttribute("ESEN.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ESEN.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
