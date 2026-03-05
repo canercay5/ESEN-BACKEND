@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "ESEN.API.Controllers.NotificationController",
+    "Method": "GetNotifications",
+    "RelativePath": "api/Notification/get/{UserId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ESEN.API.Controllers.OutbreakController",
     "Method": "AnalyzeRegion",
     "RelativePath": "api/Outbreak/analyze/{regionId}",
@@ -17,12 +33,18 @@
   },
   {
     "ContainingType": "ESEN.API.Controllers.SeedController",
-    "Method": "GenerateTestData",
-    "RelativePath": "api/Seed/generate-test-data",
+    "Method": "GenerateOutbreak",
+    "RelativePath": "api/Seed/generate-outbreak",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "generateOutbreakRequestDto",
+        "Type": "ESEN.Application.DTOs.GenerateOutbreakRequestDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -48,6 +70,43 @@
   },
   {
     "ContainingType": "ESEN.API.Controllers.UserController",
+    "Method": "UnfollowRegion",
+    "RelativePath": "api/User/{userId}/unfollow/{regionId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "regionId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ESEN.API.Controllers.UserController",
+    "Method": "GetInfo",
+    "RelativePath": "api/User/getinfo/{UserId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ESEN.API.Controllers.UserController",
     "Method": "RegisterUser",
     "RelativePath": "api/User/register",
     "HttpMethod": "POST",
@@ -55,8 +114,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "deviceToken",
-        "Type": "System.String",
+        "Name": "dto",
+        "Type": "ESEN.Application.DTOs.UserRegistrationDto",
         "IsRequired": true
       }
     ],

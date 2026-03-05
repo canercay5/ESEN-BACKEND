@@ -2,7 +2,15 @@
 {
     public class User : BaseEntity
     {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string City { get; set; }
+        public string Town { get; set; }
+        public string Neighborhood { get; set; }
         public string DeviceToken { get; private set; }
+
         private readonly List<UserRegion> _followedRegions = new();
         public IReadOnlyCollection<UserRegion> FollowedRegions => _followedRegions.AsReadOnly();
 

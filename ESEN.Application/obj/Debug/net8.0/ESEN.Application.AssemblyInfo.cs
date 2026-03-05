@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ESEN.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02c7860fef956d0d9fdddea6fd52697872c5d249")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6753381e05c33d70c19541ab7254a4065a8034fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("ESEN.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ESEN.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

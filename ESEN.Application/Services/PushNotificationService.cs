@@ -1,11 +1,11 @@
 ﻿using ESEN.Application.Interfaces;
+using FirebaseAdmin.Messaging;
 using Microsoft.Extensions.Logging;
 
 namespace ESEN.Infrastructure.Services
 {
     public class PushNotificationService : IPushNotificationService
     {
-        // Sistem loglarını konsola veya dosyaya yazdırmak için .NET'in yerleşik Logger'ını kullanıyoruz
         private readonly ILogger<PushNotificationService> _logger;
 
         public PushNotificationService(ILogger<PushNotificationService> logger)
@@ -17,29 +17,34 @@ namespace ESEN.Infrastructure.Services
         {
             try
             {
-                // TODO: İleride Firebase Admin SDK (FirebaseApp.DefaultInstance) entegrasyonu buraya gelecek.
-                /* Gerçek Kod Örneği:
-                 * var fcmMessage = new Message() { Token = deviceToken, Notification = new Notification { Title = title, Body = message } };
-                 * string response = await FirebaseMessaging.DefaultInstance.SendAsync(fcmMessage);
-                 */
+                if (string.IsNullOrWhiteSpace(deviceToken) || deviceToken.Length < 10)
+                {
+                    _logger.LogWarning("Geçersiz veya boş cihaz token'ı. Bildirim gönderilmedi.");
+                    return false;
+                }
 
-                // Şimdilik gönderim işlemini simüle ediyoruz (Mocking)
+                var fcmMessage = new Message()
+                {
+                    Token = deviceToken,
+                    Notification = new Notification
+                    {
+                        Title = title,
+                        Body = message
+                    }
+                };
+                string response = await FirebaseMessaging.DefaultInstance.SendAsync(fcmMessage);
+
                 _logger.LogInformation("==================================================");
-                _logger.LogInformation("📱 PUSH NOTIFICATION GÖNDERİLİYOR...");
-                _logger.LogInformation($"Hedef Cihaz: {deviceToken}");
+                _logger.LogInformation("🚀 FIREBASE PUSH NOTIFICATION BAŞARIYLA GÖNDERİLDİ!");
+                _logger.LogInformation($"FCM Yanıtı: {response}");
                 _logger.LogInformation($"Başlık: {title}");
-                _logger.LogInformation($"Mesaj: {message}");
-                _logger.LogInformation("Durum: BAŞARILI");
                 _logger.LogInformation("==================================================");
-
-                // İşlemin başarılı olduğunu simüle etmek için küçük bir gecikme ekliyoruz
-                await Task.Delay(100);
 
                 return true;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Bildirim gönderilirken hata oluştu. Cihaz: {deviceToken}");
+                _logger.LogError(ex, $"Firebase bildirimi gönderilirken kritik hata oluştu. Token: {deviceToken}");
                 return false;
             }
         }

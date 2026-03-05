@@ -36,27 +36,25 @@ namespace ESEN.Application.Services
 
         public async Task AnalyzeRegionAsync(Guid regionId)
         {
-            // 1. Bölgeyi getir
             var region = await _regionRepository.GetByIdAsync(regionId);
             if (region == null) throw new Exception("Bölge bulunamadı.");
 
-            // 2. Son 7 günün verilerini MongoDB'den getir (Gerçekte veritabanı sorgusuyla filtrelenmeli)
             var allMetrics = await _metricRepository.GetAllAsync();
             var last7DaysMetrics = allMetrics
                 .Where(m => m.RegionId == regionId)
                 .OrderByDescending(m => m.Date)
                 .Take(7)
-                .OrderBy(m => m.Date) // API'ye kronolojik sırayla gitmeli
+                .OrderBy(m => m.Date)
                 .ToList();
 
             if (last7DaysMetrics.Count < 7)
                 throw new Exception("Yapay zeka analizi için yeterli geçmiş veri yok (Min: 7 gün).");
 
-            // 3. Python API için DTO oluştur
             var requestDto = new PredictionRequestDto
             {
                 City = region.City,
                 Town = region.Town,
+                Neighborhood = region.Neighborhood,
                 Features = last7DaysMetrics.Select(m => new DailyDataDto
                 {
                     Sales = m.TotalSales,
@@ -66,29 +64,23 @@ namespace ESEN.Application.Services
                 }).ToList()
             };
 
-            // 4. FastAPI'ye istek at (Köprüden geçiş)
             var aiResult = await _aiPredictionService.CheckOutbreakRiskAsync(requestDto);
 
-            // 5. Eğer salgın riski varsa!
             if (aiResult.Is_Outbreak_Detected)
             {
-                // Alarmı veritabanına kaydet
                 var alert = new OutbreakAlert(region.Id, DateTime.UtcNow, aiResult.Risk_Score, aiResult.Threshold, true, aiResult.Message);
                 await _alertRepository.AddAsync(alert);
 
-                // Bu bölgeyi takip eden kullanıcıları bul
                 var allUsers = await _userRepository.GetAllAsync();
                 var usersToNotify = allUsers.Where(u => u.FollowedRegions.Any(r => r.RegionId == region.Id)).ToList();
 
-                // Flutter (Firebase) üzerinden kullanıcılara bildirim at
                 foreach (var user in usersToNotify)
                 {
                     string title = $"⚠️ Salgın Riski: {region.Town}";
-                    string message = $"Modelimiz {region.Town} bölgesi için anormal sağlık hareketliliği tespit etti. Lütfen dikkatli olun.";
+                    string message = $"Modelimiz {region.Town} - {region.Neighborhood} bölgesi için anormal sağlık hareketliliği tespit etti. Lütfen dikkatli olun.";
 
                     bool isSent = await _pushNotificationService.SendNotificationAsync(user.DeviceToken, title, message);
 
-                    // Bildirim geçmişini kaydet
                     var notificationRecord = new PushNotification(user.Id, alert.Id, title, message);
                     if (isSent) notificationRecord.MarkAsSent();
 

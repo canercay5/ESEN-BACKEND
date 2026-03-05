@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "237771883130",
+    "project_id": "esen-app-b5ed3",
+    "storage_bucket": "esen-app-b5ed3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237771883130:android:88c7733bdc4ab1fa6e31c3",
+        "android_client_info": {
+          "package_name": "com.yaga.esenapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALovTvs9jEoJUzcOIVSGb1xpe4u_MzB5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

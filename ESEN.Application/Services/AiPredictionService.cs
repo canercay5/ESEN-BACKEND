@@ -12,13 +12,9 @@ namespace ESEN.Infrastructure.Services
         private readonly HttpClient _httpClient;
         private readonly string _aiApiUrl;
 
-        // Dependency Injection ile HttpClient ve Configuration (ayarlar) alıyoruz
         public AiPredictionService(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
-
-            // appsettings.json dosyasından Python API'nin adresini alıyoruz. 
-            // Eğer ayar girilmemişse varsayılan olarak localhost:8000 kullanıyoruz.
             _aiApiUrl = configuration["AiApiSettings:BaseUrl"] ?? "http://localhost:8000";
         }
 
@@ -26,17 +22,14 @@ namespace ESEN.Infrastructure.Services
         {
             try
             {
-                // C#'taki DTO'muzu JSON'a çevirip Python API'sine POST isteği atıyoruz
                 var response = await _httpClient.PostAsJsonAsync($"{_aiApiUrl}/api/predict", request);
 
-                // Eğer Python tarafında bir hata olduysa (örn: 500 Internal Server Error)
                 if (!response.IsSuccessStatusCode)
                 {
                     var errorContent = await response.Content.ReadAsStringAsync();
                     throw new Exception($"Yapay Zeka servisi hata döndürdü. Status Code: {response.StatusCode}, Detay: {errorContent}");
                 }
 
-                // Python'dan dönen JSON cevabını tekrar C# nesnesine (DTO) dönüştürüyoruz
                 var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
                 var result = await response.Content.ReadFromJsonAsync<PredictionResponseDto>(options);
 
@@ -49,7 +42,6 @@ namespace ESEN.Infrastructure.Services
             }
             catch (HttpRequestException ex)
             {
-                // FastAPI kapalıysa veya ulaşılamıyorsa bu hata fırlatılır
                 throw new Exception("Yapay Zeka (FastAPI) servisine ulaşılamıyor. Python API'nin terminalde çalışır durumda olduğundan emin olun.", ex);
             }
         }

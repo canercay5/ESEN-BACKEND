@@ -1,8 +1,35 @@
-﻿using System.Text.Json.Serialization; // Bunu eklemeyi unutma!
+﻿using ESEN.Domain.Entities;
+using System.Text.Json.Serialization;
 
 namespace ESEN.Application.DTOs
 {
-    // C#'tan Python'a gidecek günlük veri modeli
+    public class UserRegistrationDto
+    {
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
+
+        [JsonPropertyName("surname")]
+        public string Surname { get; set; }
+
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+
+        [JsonPropertyName("password")]
+        public string Password { get; set; }
+
+        [JsonPropertyName("city")]
+        public string City { get; set; }
+
+        [JsonPropertyName("town")]
+        public string Town { get; set; }
+
+        [JsonPropertyName("neighborhood")]
+        public string Neighborhood { get; set; }
+
+        [JsonPropertyName("device_token")]
+        public string DeviceToken { get; set; }
+    }
+
     public class DailyDataDto
     {
         [JsonPropertyName("sales")]
@@ -18,7 +45,6 @@ namespace ESEN.Application.DTOs
         public double NormalizedDensity { get; set; }
     }
 
-    // Python API'sine atılacak ana istek modeli
     public class PredictionRequestDto
     {
         [JsonPropertyName("city")]
@@ -27,11 +53,13 @@ namespace ESEN.Application.DTOs
         [JsonPropertyName("town")]
         public string Town { get; set; }
 
+        [JsonPropertyName("neighborhood")]
+        public string Neighborhood { get; set; }
+
         [JsonPropertyName("features")]
         public List<DailyDataDto> Features { get; set; } = new List<DailyDataDto>();
     }
 
-    // Python'dan C#'a dönecek cevap modeli
     public class PredictionResponseDto
     {
         [JsonPropertyName("region")]
@@ -48,5 +76,20 @@ namespace ESEN.Application.DTOs
 
         [JsonPropertyName("message")]
         public string Message { get; set; }
+    }
+
+    public class GenerateOutbreakRequestDto
+    {
+        [JsonPropertyName("city")]
+        public string City { get; set; }
+
+        [JsonPropertyName("town")]
+        public string Town { get; set; }
+
+        [JsonPropertyName("neighborhood")]
+        public string Neighborhood { get; set; }
+
+        [JsonPropertyName("metrics")]
+        public List<DailyHealthMetric> Metrics { get; set; }
     }
 }

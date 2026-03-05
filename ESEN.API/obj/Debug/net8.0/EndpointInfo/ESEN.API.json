@@ -5,6 +5,29 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Notification/get/{UserId}": {
+      "get": {
+        "tags": [
+          "Notification"
+        ],
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Outbreak/analyze/{regionId}": {
       "post": {
         "tags": [
@@ -28,10 +51,52 @@
         }
       }
     },
-    "/api/Seed/generate-test-data": {
+    "/api/Seed/generate-outbreak": {
       "post": {
         "tags": [
           "Seed"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateOutbreakRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateOutbreakRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateOutbreakRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/getinfo/{UserId}": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -49,17 +114,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/UserRegistrationDto"
               }
             },
             "text/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/UserRegistrationDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/UserRegistrationDto"
               }
             }
           }
@@ -102,7 +167,249 @@
           }
         }
       }
+    },
+    "/api/User/{userId}/unfollow/{regionId}": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "regionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
-  "components": { }
+  "components": {
+    "schemas": {
+      "DailyHealthMetric": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "readOnly": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "isDeleted": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "regionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalSales": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "averageTemperature": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "averageHumidity": {
+            "type": "number",
+            "format": "double",
+            "readOnly": true
+          },
+          "region": {
+            "$ref": "#/components/schemas/Region"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GenerateOutbreakRequestDto": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "town": {
+            "type": "string",
+            "nullable": true
+          },
+          "neighborhood": {
+            "type": "string",
+            "nullable": true
+          },
+          "metrics": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DailyHealthMetric"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OutbreakAlert": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "readOnly": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "isDeleted": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "regionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "targetDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "riskScore": {
+            "type": "number",
+            "format": "double"
+          },
+          "threshold": {
+            "type": "number",
+            "format": "double"
+          },
+          "isOutbreakDetected": {
+            "type": "boolean"
+          },
+          "alertMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "region": {
+            "$ref": "#/components/schemas/Region"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Region": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "readOnly": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+          },
+          "isDeleted": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "town": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedDensity": {
+            "type": "number",
+            "format": "double"
+          },
+          "neighborhood": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "dailyMetrics": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DailyHealthMetric"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "outbreakAlerts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OutbreakAlert"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserRegistrationDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "surname": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "town": {
+            "type": "string",
+            "nullable": true
+          },
+          "neighborhood": {
+            "type": "string",
+            "nullable": true
+          },
+          "device_token": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
 }

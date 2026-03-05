@@ -49,3 +49,16 @@ C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\ESEN.Infr
 C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\ESEN.Application.pdb
 C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\ESEN.Infrastructure.pdb
 C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\ESEN.Domain.pdb
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\firebase-key.json
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\google-services.json
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\FirebaseAdmin.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\Google.Api.Gax.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\Google.Apis.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\Google.Apis.Auth.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\Google.Apis.Core.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\System.Management.dll
+C:\Users\Caner\Desktop\ESEN\backend_api\ESEN\ESEN.API\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll

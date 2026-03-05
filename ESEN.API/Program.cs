@@ -7,19 +7,30 @@ using ESEN.Infrastructure.Services;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
 
 var builder = WebApplication.CreateBuilder(args);
 
 BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
 
-// --- 1. CONTROLLER VE SWAGGER AYARLARI ---
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// --- 2. MONGODB BAÐLANTI AYARLARI (Singleton) ---
-// appsettings.json'dan MongoDbSettings kýsmýný okuyoruz.
-// MongoDB istemcisi (MongoClient) thread-safe olduðu için Singleton olarak kaydedilmesi best practice'tir.
+var firebaseKeyPath = Path.Combine(builder.Environment.ContentRootPath, "firebase-key.json");
+if (File.Exists(firebaseKeyPath))
+{
+    FirebaseApp.Create(new AppOptions()
+    {
+        Credential = GoogleCredential.FromFile(firebaseKeyPath)
+    });
+}
+else
+{
+    Console.WriteLine("DÝKKAT: firebase-key.json dosyasý bulunamadý! Bildirimler çalýþmayacak.");
+}
+
 builder.Services.AddSingleton<MongoDbContext>(sp =>
 {
     var configuration = sp.GetRequiredService<IConfiguration>();
@@ -29,26 +40,13 @@ builder.Services.AddSingleton<MongoDbContext>(sp =>
     return new MongoDbContext(connectionString, databaseName);
 });
 
-// --- 3. REPOSITORY (Depo) AYARLARI (Scoped) ---
-// Generic bir yapýmýz olduðu için typeof() kullanýyoruz.
-// Her HTTP isteðinde (Request) yeni bir nesne oluþturulmasý için Scoped seçiyoruz.
 builder.Services.AddScoped(typeof(IRepository<>), typeof(MongoRepository<>));
-
-// --- 4. DIÞ SERVÝSLER (Application & Infrastructure) ---
-// Push Notification mock servisi
 builder.Services.AddScoped<IPushNotificationService, PushNotificationService>();
-
-// Ana iþ mantýðýmýz olan Use Case servisi
 builder.Services.AddScoped<OutbreakAnalysisService>();
-
-// --- 5. HTTP CLIENT AYARLARI ---
-// AiPredictionService içinde HttpClient kullanýyoruz. IHttpClientFactory deseniyle 
-// HttpClient nesnelerinin yönetimini .NET'in kendisine býrakýyoruz. Bu bellek sýzýntýlarýný önler.
 builder.Services.AddHttpClient<IAiPredictionService, AiPredictionService>();
 
 var app = builder.Build();
 
-// --- HTTP REQUEST PIPELINE (Ara Katmanlar) ---
 app.UseSwagger();
 app.UseSwaggerUI();
 
