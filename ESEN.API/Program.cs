@@ -15,6 +15,14 @@ var builder = WebApplication.CreateBuilder(args);
 BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
 
 builder.Services.AddControllers();
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+        policy
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -28,7 +36,7 @@ if (File.Exists(firebaseKeyPath))
 }
 else
 {
-    Console.WriteLine("DÝKKAT: firebase-key.json dosyasý bulunamadý! Bildirimler çalýþmayacak.");
+    Console.WriteLine("Dï¿½KKAT: firebase-key.json dosyasï¿½ bulunamadï¿½! Bildirimler ï¿½alï¿½ï¿½mayacak.");
 }
 
 builder.Services.AddSingleton<MongoDbContext>(sp =>
@@ -51,6 +59,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 app.UseAuthorization();
 app.MapControllers();
 
