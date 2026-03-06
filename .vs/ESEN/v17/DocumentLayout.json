@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{880704D5-7A2B-41B9-9349-0E4E19100042}|ESEN.Domain\\ESEN.Domain.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.domain\\entities\\dailyhealthmetric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{880704D5-7A2B-41B9-9349-0E4E19100042}|ESEN.Domain\\ESEN.Domain.csproj|solutionrelative:esen.domain\\entities\\dailyhealthmetric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{880704D5-7A2B-41B9-9349-0E4E19100042}|ESEN.Domain\\ESEN.Domain.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.domain\\entities\\pushnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{880704D5-7A2B-41B9-9349-0E4E19100042}|ESEN.Domain\\ESEN.Domain.csproj|solutionrelative:esen.domain\\entities\\pushnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10845F15-7F0C-419B-B7A7-C16FAE9CB749}|ESEN.Application\\ESEN.Application.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.application\\dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10845F15-7F0C-419B-B7A7-C16FAE9CB749}|ESEN.Application\\ESEN.Application.csproj|solutionrelative:esen.application\\dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBE2B02C-5D43-44B2-B684-EA20EF3F7D15}|ESEN.API\\ESEN.API.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.api\\controllers\\seedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBE2B02C-5D43-44B2-B684-EA20EF3F7D15}|ESEN.API\\ESEN.API.csproj|solutionrelative:esen.api\\controllers\\seedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBE2B02C-5D43-44B2-B684-EA20EF3F7D15}|ESEN.API\\ESEN.API.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBE2B02C-5D43-44B2-B684-EA20EF3F7D15}|ESEN.API\\ESEN.API.csproj|solutionrelative:esen.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{823B46E8-A61D-4F1F-8AA9-50AE4F3984B2}|ESEN.Infrastructure\\ESEN.Infrastructure.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.infrastructure\\repositories\\mongorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{823B46E8-A61D-4F1F-8AA9-50AE4F3984B2}|ESEN.Infrastructure\\ESEN.Infrastructure.csproj|solutionrelative:esen.infrastructure\\repositories\\mongorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{880704D5-7A2B-41B9-9349-0E4E19100042}|ESEN.Domain\\ESEN.Domain.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{880704D5-7A2B-41B9-9349-0E4E19100042}|ESEN.Domain\\ESEN.Domain.csproj|solutionrelative:esen.domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE2B02C-5D43-44B2-B684-EA20EF3F7D15}|ESEN.API\\ESEN.API.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.api\\controllers\\seedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBE2B02C-5D43-44B2-B684-EA20EF3F7D15}|ESEN.API\\ESEN.API.csproj|solutionrelative:esen.api\\controllers\\seedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBE2B02C-5D43-44B2-B684-EA20EF3F7D15}|ESEN.API\\ESEN.API.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{10845F15-7F0C-419B-B7A7-C16FAE9CB749}|ESEN.Application\\ESEN.Application.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.application\\services\\outbreakanalysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10845F15-7F0C-419B-B7A7-C16FAE9CB749}|ESEN.Application\\ESEN.Application.csproj|solutionrelative:esen.application\\services\\outbreakanalysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823B46E8-A61D-4F1F-8AA9-50AE4F3984B2}|ESEN.Infrastructure\\ESEN.Infrastructure.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.infrastructure\\repositories\\mongorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823B46E8-A61D-4F1F-8AA9-50AE4F3984B2}|ESEN.Infrastructure\\ESEN.Infrastructure.csproj|solutionrelative:esen.infrastructure\\repositories\\mongorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10845F15-7F0C-419B-B7A7-C16FAE9CB749}|ESEN.Application\\ESEN.Application.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.application\\services\\pushnotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,14 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBE2B02C-5D43-44B2-B684-EA20EF3F7D15}|ESEN.API\\ESEN.API.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.api\\firebase-key.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{FBE2B02C-5D43-44B2-B684-EA20EF3F7D15}|ESEN.API\\ESEN.API.csproj|solutionrelative:esen.api\\firebase-key.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{880704D5-7A2B-41B9-9349-0E4E19100042}|ESEN.Domain\\ESEN.Domain.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.domain\\entities\\pushnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{880704D5-7A2B-41B9-9349-0E4E19100042}|ESEN.Domain\\ESEN.Domain.csproj|solutionrelative:esen.domain\\entities\\pushnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{880704D5-7A2B-41B9-9349-0E4E19100042}|ESEN.Domain\\ESEN.Domain.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{880704D5-7A2B-41B9-9349-0E4E19100042}|ESEN.Domain\\ESEN.Domain.csproj|solutionrelative:esen.domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBE2B02C-5D43-44B2-B684-EA20EF3F7D15}|ESEN.API\\ESEN.API.csproj|c:\\users\\caner\\desktop\\esen\\backend_api\\esen\\esen.api\\controllers\\outbreakcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,24 +82,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DailyHealthMetric.cs",
-              "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Domain\\Entities\\DailyHealthMetric.cs",
-              "RelativeDocumentMoniker": "ESEN.Domain\\Entities\\DailyHealthMetric.cs",
-              "ToolTip": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Domain\\Entities\\DailyHealthMetric.cs",
-              "RelativeToolTip": "ESEN.Domain\\Entities\\DailyHealthMetric.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAQwBwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T13:31:48.751Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "firebase-key.json",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.API\\firebase-key.json",
               "RelativeDocumentMoniker": "ESEN.API\\firebase-key.json",
@@ -115,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.API\\Program.cs",
               "RelativeDocumentMoniker": "ESEN.API\\Program.cs",
@@ -127,44 +110,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "PushNotification.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Domain\\Entities\\PushNotification.cs",
               "RelativeDocumentMoniker": "ESEN.Domain\\Entities\\PushNotification.cs",
               "ToolTip": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Domain\\Entities\\PushNotification.cs",
               "RelativeToolTip": "ESEN.Domain\\Entities\\PushNotification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAUwCEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T22:54:56.658Z"
+              "WhenOpened": "2026-03-05T22:54:56.658Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "NotificationController.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.API\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "ESEN.API\\Controllers\\NotificationController.cs",
               "ToolTip": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.API\\Controllers\\NotificationController.cs",
               "RelativeToolTip": "ESEN.API\\Controllers\\NotificationController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA4wBgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-05T22:53:07.477Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Domain\\Interfaces\\IRepository.cs",
               "RelativeDocumentMoniker": "ESEN.Domain\\Interfaces\\IRepository.cs",
               "ToolTip": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Domain\\Interfaces\\IRepository.cs",
               "RelativeToolTip": "ESEN.Domain\\Interfaces\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T22:51:42.263Z"
+              "WhenOpened": "2026-03-05T22:51:42.263Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "OutbreakController.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.API\\Controllers\\OutbreakController.cs",
               "RelativeDocumentMoniker": "ESEN.API\\Controllers\\OutbreakController.cs",
@@ -182,14 +167,14 @@
               "RelativeDocumentMoniker": "ESEN.Application\\DTOs\\DTOs.cs",
               "ToolTip": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Application\\DTOs\\DTOs.cs",
               "RelativeToolTip": "ESEN.Application\\DTOs\\DTOs.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAA8wFwAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-05T21:20:08.193Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "ESEN.Domain\\Entities\\User.cs",
@@ -201,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.API\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "ESEN.API\\Controllers\\UserController.cs",
@@ -214,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "PushNotificationService.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Application\\Services\\PushNotificationService.cs",
               "RelativeDocumentMoniker": "ESEN.Application\\Services\\PushNotificationService.cs",
@@ -227,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "AiPredictionService.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Application\\Services\\AiPredictionService.cs",
               "RelativeDocumentMoniker": "ESEN.Application\\Services\\AiPredictionService.cs",
@@ -239,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "OutbreakAnalysisService.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Application\\Services\\OutbreakAnalysisService.cs",
               "RelativeDocumentMoniker": "ESEN.Application\\Services\\OutbreakAnalysisService.cs",
@@ -252,20 +237,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "MongoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Infrastructure\\Repositories\\MongoRepository.cs",
               "RelativeDocumentMoniker": "ESEN.Infrastructure\\Repositories\\MongoRepository.cs",
               "ToolTip": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Infrastructure\\Repositories\\MongoRepository.cs",
               "RelativeToolTip": "ESEN.Infrastructure\\Repositories\\MongoRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAiwA8AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-05T21:34:16.691Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "UserRegion.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Domain\\Entities\\UserRegion.cs",
               "RelativeDocumentMoniker": "ESEN.Domain\\Entities\\UserRegion.cs",
@@ -277,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "Region.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Domain\\Entities\\Region.cs",
               "RelativeDocumentMoniker": "ESEN.Domain\\Entities\\Region.cs",
@@ -289,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "MongoDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.Infrastructure\\Data\\MongoDbContext.cs",
               "RelativeDocumentMoniker": "ESEN.Infrastructure\\Data\\MongoDbContext.cs",
@@ -301,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SeedController.cs",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.API\\Controllers\\SeedController.cs",
               "RelativeDocumentMoniker": "ESEN.API\\Controllers\\SeedController.cs",
@@ -314,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Caner\\Desktop\\ESEN\\backend_api\\ESEN\\ESEN.API\\appsettings.json",
               "RelativeDocumentMoniker": "ESEN.API\\appsettings.json",
