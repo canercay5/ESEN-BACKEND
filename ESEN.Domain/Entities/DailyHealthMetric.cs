@@ -17,6 +17,7 @@ namespace ESEN.Domain.Entities
         [JsonPropertyName("region")]
         public virtual Region Region { get; private set; }
 
+        [JsonConstructor]
         public DailyHealthMetric(Guid regionId, DateTime date, int totalSales, double avgTemp, double avgHumidity)
         {
             RegionId = regionId;
