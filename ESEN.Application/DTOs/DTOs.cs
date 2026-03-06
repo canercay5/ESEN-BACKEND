@@ -97,7 +97,7 @@ namespace ESEN.Application.DTOs
     {
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
-        [JsonPropertyName("Name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
         [JsonPropertyName("surname")]
         public string Surname { get; set; }
