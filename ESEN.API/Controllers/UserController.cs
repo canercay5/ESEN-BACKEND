@@ -43,6 +43,23 @@ namespace ESEN.API.Controllers
             return Ok(new { Message = "Kullanıcı bilgileri getirildi.", User = dto });
         }
 
+        [HttpGet("regions")]
+        public async Task<IActionResult> GetAllRegions()
+        {
+            var regions = await _regionRepository.GetAllAsync();
+
+            var regionDtos = regions.Select(region => new RegionDto
+            {
+                Id = region.Id,
+                City = region.City,
+                Town = region.Town,
+                Neighborhood = region.Neighborhood,
+                NormalizedDensity = region.NormalizedDensity
+            }).ToList();
+
+            return Ok(new { Message = "Tüm bölgeler getirildi.", Regions = regionDtos });
+        }
+
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser([FromBody] UserRegistrationDto dto)
         {

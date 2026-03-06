@@ -112,4 +112,18 @@ namespace ESEN.Application.DTOs
         [JsonPropertyName("devicetoken")]
         public string DeviceToken { get; set; }
     }
+
+    public class RegionDto
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+        [JsonPropertyName("city")]
+        public string City { get; set; }
+        [JsonPropertyName("town")]
+        public string Town { get; set; }
+        [JsonPropertyName("neighborhood")]
+        public string Neighborhood { get; set; }
+        [JsonPropertyName("normalizedDensity")]
+        public double NormalizedDensity { get; set; }
+    }
 }
