@@ -92,4 +92,24 @@ namespace ESEN.Application.DTOs
         [JsonPropertyName("metrics")]
         public List<DailyHealthMetric> Metrics { get; set; }
     }
+
+    public class UserInfoDto
+    {
+        [JsonPropertyName("id")]
+        public Guid Id { get; set; }
+        [JsonPropertyName("Name")]
+        public string Name { get; set; }
+        [JsonPropertyName("surname")]
+        public string Surname { get; set; }
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
+        [JsonPropertyName("city")]
+        public string City { get; set; }
+        [JsonPropertyName("town")]
+        public string Town { get; set; }
+        [JsonPropertyName("neighborhood")]
+        public string Neighborhood { get; set; }
+        [JsonPropertyName("devicetoken")]
+        public string DeviceToken { get; set; }
+    }
 }

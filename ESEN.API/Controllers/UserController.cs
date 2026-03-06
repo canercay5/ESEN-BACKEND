@@ -28,7 +28,19 @@ namespace ESEN.API.Controllers
                 return NotFound("Kullanıcı bulunamadı.");
             }
 
-            return Ok(new { Message = "Kullanıcı bilgileri getirildi.", User = user});
+            var dto = new UserInfoDto
+            {
+                Id = user.Id,
+                Name = user.Name,
+                Surname = user.Surname,
+                Email = user.Email,
+                City = user.City,
+                Town = user.Town,
+                Neighborhood = user.Neighborhood,
+                DeviceToken = user.DeviceToken
+            };
+
+            return Ok(new { Message = "Kullanıcı bilgileri getirildi.", User = dto });
         }
 
         [HttpPost("register")]
