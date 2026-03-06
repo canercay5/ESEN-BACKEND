@@ -18,7 +18,7 @@ namespace ESEN.API.Controllers
             _regionRepository = regionRepository;
         }
 
-        [HttpPost("getinfo/{UserId}")]
+        [HttpGet("getinfo/{UserId}")]
         public async Task<IActionResult> GetInfo(Guid UserId)
         {
             var user = await _userRepository.GetByIdAsync(UserId);
