@@ -4,6 +4,8 @@ namespace ESEN.Domain.Entities
 {
     public class PushNotification : BaseEntity
     {
+        [JsonPropertyName("deviceToken")]
+        public string DeviceToken { get; set; }
         [JsonPropertyName("userId")]
         public Guid UserId { get; private set; }
         [JsonPropertyName("outbreakAlertId")]
