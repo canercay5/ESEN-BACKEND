@@ -60,6 +60,19 @@ namespace ESEN.API.Controllers
             return Ok(new { Message = "Tüm bölgeler getirildi.", Regions = regionDtos });
         }
 
+        [HttpPost("login")]
+        public Task<IActionResult> Login([FromBody] LoginDto dto)
+        {
+            var user =  _userRepository.GetAllAsync().Result.FirstOrDefault(u => u.Email == dto.Email && u.Password == dto.Password);
+            
+            if(user == null)
+            {
+                return Task.FromResult<IActionResult>(Unauthorized("Geçersiz email veya şifre."));
+            }
+
+            return Task.FromResult<IActionResult>(Ok(new { Message = "Giriş başarılı.", UserId = user.Id }));
+        }
+
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser([FromBody] UserRegistrationDto dto)
         {
